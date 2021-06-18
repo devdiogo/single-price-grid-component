@@ -18,7 +18,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [...](...)
+- Live Site URL: [https://single-price-grid-component-nine-psi.vercel.app](https://single-price-grid-component-nine-psi.vercel.app)
 
 ### Built with
 
