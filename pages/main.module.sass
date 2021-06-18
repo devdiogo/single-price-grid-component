@@ -1,0 +1,132 @@
+@import "../styles/variables"
+
+.container
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 100vh
+  max-width: $desktop
+
+.main
+  margin: 72px 32px
+  display: grid
+  grid-template-areas: "description description" "price price" "why why"
+  grid-template-rows: minmax(267px, auto) 1fr
+  box-shadow: 0px 15px 30px 0px hsla(212, 100%, 33%, 0.15)
+  @media (min-width: $tablet)
+    margin: 1px 0 0 0
+    width: 635px
+    height: 475px
+    grid-template-areas: "description description" "price why"
+    grid-template-rows: 45.5% 1fr
+    grid-template-columns: 1fr 1fr
+
+.description
+  border-top-left-radius: 8px
+  border-top-right-radius: 8px
+  padding: 40px 40.5px
+  grid-area: description
+  background: $white
+  h1
+    color: $cyan
+    font-size: 24px
+    letter-spacing: -0.3px
+    margin-bottom: 24px
+    font-weight: 700
+  h2
+    color: $bright-yellow
+    font-size: 18px
+    letter-spacing: -0.22px
+    margin-bottom: 10px
+  p
+    color: $grayish-blue
+    font-size: 16px
+    letter-spacing: -0.15px
+    line-height: 26px
+  @media (max-width: $mobile)
+    padding: 28px 24px
+    h1
+      font-size: 20px
+      letter-spacing: -0.25px
+    h2
+      font-size: 15px
+      letter-spacing: -0.19px
+      line-height: 20px
+      margin-bottom: 16px
+    p
+      font-size: 14px
+      letter-spacing: -0.15px
+
+.price
+  padding: 39px 40px
+  grid-area: price
+  background: $cyan
+  > div
+    display: flex
+    align-items: center
+    margin-bottom: 4px
+    span
+      font-size: 24px
+      letter-spacing: -0.20px
+      &:first-child
+        font-size: 32px
+        font-weight: 700
+        line-height: 37px
+      &:last-child
+        font-size: 16px
+        color: rgba(255,255,255, 0.5)
+        margin-left: 12px
+  p
+    font-size: 16px
+    line-height: 26px
+    letter-spacing: -0.20px
+    margin-bottom: 26px
+  button
+    cursor: pointer
+    color: $white
+    font-size: 16px
+    font-weight: 700
+    letter-spacing: -0.2px
+    padding: 14.5px 0
+    width: 100%
+    border: 0
+    background: $bright-yellow
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.09)
+    border-radius: 5px
+    transition: color 0.4s, background 0.4s
+    &:hover
+      color: $bright-yellow
+      background: $white
+    &:active
+      font-size: 15.85px
+      padding: 12.5px 0
+      border: 2px dotted $grayish-blue
+  @media (min-width: $tablet)
+    border-bottom-left-radius: 8px
+
+.why
+  border-bottom-left-radius: 8px
+  border-bottom-right-radius: 8px
+  padding: 39px 40px
+  grid-area: why
+  background: #4BBFBC
+  ul
+    margin-top: 17px
+    list-style: none
+    line-height: 20px
+    li
+      color: rgba(255, 255, 255, 0.75)
+      font-size: 14px
+      letter-spacing: -0.17px
+  @media (min-width: $tablet)
+    border-bottom-left-radius: 0
+
+.price, .why
+  color: $white
+  h2
+    font-size: 18px
+    line-height: 24px
+    letter-spacing: -0.22px
+    margin-bottom: 16px
+  @media (max-width: $mobile)
+    padding: 23px 24px
